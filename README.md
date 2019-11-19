@@ -1,10 +1,10 @@
-# Blynk PZEM-016 with NodeMCU (Single Device)
+# Blynk with 3 PZEM-016 and NodeMCU  
 Blynk ESP8266 (NodeMCU) Program for PZEM 016 Power Meter. 
 
 <h2>Requirements</h2>
-1) <a href="http://s.click.aliexpress.com/e/pV6CDdr2">PZEM-016</a></br>
-2) <a href="http://s.click.aliexpress.com/e/nlefJ4PI">NodeMCU</a></br>
-3) <a href="http://s.click.aliexpress.com/e/5D9mJ8JW">MAX485 Module RS-485 TTL to RS485 MAX485CSA Converter Module </a></br>
+1) <a href="http://s.click.aliexpress.com/e/pV6CDdr2">PZEM-016 (3 No)</a></br>
+2) <a href="http://s.click.aliexpress.com/e/nlefJ4PI">NodeMCU (1 No) </a></br>
+3) <a href="http://s.click.aliexpress.com/e/5D9mJ8JW">MAX485 Module RS-485 TTL to RS485 MAX485CSA Converter Module (1 No) </a></br>
 4) <a href="http://s.click.aliexpress.com/e/e9vv4Wwy">USB to RS485 485 Converter Adapter</a> (optional)</br>
 5) <a href="https://play.google.com/store/apps/details?id=cc.blynk">Blynk App</a></br>
 
@@ -19,12 +19,12 @@ Open settings.h and change Bynk Auth code, Wifi settings, server settings and fe
 GND to GND</br>
 5v to Vin</br>
 
-<h3>PZEM-016 to RS-485 TTL Converter to RS485</h3>
+<h3>Connect 3 PZEM-016 to RS485</h3>
 
 A to A</br>
 B to B</br>
 
-<h3>RS-485 TTL to RS485 Converter to NodeMCU</h3>
+<h3>RS-485 TTL to NodeMCU</h3>
 
 VCC to 3V</br>
 GND to GND</br>
