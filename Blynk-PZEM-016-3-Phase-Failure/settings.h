@@ -2,7 +2,7 @@
 //                           Settings                          //
 /////////////////////////////////////////////////////////////////
 
-#define BUILD_NUMBER          001                 // Build number is something like change some variables in code and building binary file. 
+#define BUILD_NUMBER          05                    // Build number is to know latest code is running when we do FOTA update
 
 /***************************************************
           NodeMCU Pin Assignment
@@ -36,7 +36,7 @@
 How often you would like to call function? Enter time in milliseconds  
  **************************************************/
 
-#define GET_PZEM_DATA_TIME          10L                        // How often you wish to get PZEM data. Enter time in milliseconds 
+#define GET_PZEM_DATA_TIME          500L                        // How often you wish to get PZEM data. Enter time in milliseconds. Keep 500L minimum or else Blynk disconnect frequently
 #define SEND_TO_BLYNK_TIME          1000L                       // How often you would like to send data to blynk app. Enter time in milliseconds  
 #define AUTO_MODE_TIME              20000L
 #define PHYSICAL_BUTTON_TIME        500L
