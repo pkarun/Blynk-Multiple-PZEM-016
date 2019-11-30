@@ -2,7 +2,7 @@
 //                           Settings                          //
 /////////////////////////////////////////////////////////////////
 
-#define BUILD_NUMBER          05                    // Build number is to know latest code is running when we do FOTA update
+#define BUILD_NUMBER          01                    // Build number is to know latest code is running or not when we do FOTA update
 
 /***************************************************
           NodeMCU Pin Assignment
@@ -36,18 +36,18 @@
 How often you would like to call function? Enter time in milliseconds  
  **************************************************/
 
-#define GET_PZEM_DATA_TIME          500L                        // How often you wish to get PZEM data. Enter time in milliseconds. Keep 500L minimum or else Blynk disconnect frequently
-#define SEND_TO_BLYNK_TIME          1000L                       // How often you would like to send data to blynk app. Enter time in milliseconds  
+#define GET_PZEM_DATA_TIME          500L                         // How often you wish to get PZEM data. Enter time in milliseconds. Keep 500L minimum or else Blynk disconnect frequently
+#define SEND_TO_BLYNK_TIME          1000L                        // How often you would like to send data to blynk app. Enter time in milliseconds  
 #define AUTO_MODE_TIME              20000L
-#define PHYSICAL_BUTTON_TIME        500L
+#define PHYSICAL_BUTTON_TIME        300L
 
 /***************************************************
           variable value assignment
  **************************************************/
 
-#define LOW_VOLTAGE_1_CUTOFF         180                           // Low Voltage cut off value. If voltage is less than this value, then it switch off the relay 
-#define LOW_VOLTAGE_2_CUTOFF         180
-#define LOW_VOLTAGE_3_CUTOFF         180
+#define LOW_VOLTAGE_1_CUTOFF         170                           // Low Voltage cut off value. If voltage is less than this value, then it switch off the relay 
+#define LOW_VOLTAGE_2_CUTOFF         170
+#define LOW_VOLTAGE_3_CUTOFF         170
 
 #define HIGH_VOLTAGE_1_CUTOFF        300                           // High Voltage cut off value. If voltage is less than this value, then it switch off the relay 
 #define HIGH_VOLTAGE_2_CUTOFF        300
@@ -78,7 +78,6 @@ How often you would like to call function? Enter time in milliseconds
 #define vPIN_ACTIVE_ENERGY_1          V14
 #define vPIN_FREQUENCY_1              V15
 #define vPIN_POWER_FACTOR_1           V16
-#define vPIN_OVER_POWER_ALARM_1       V17
 
 #define vPIN_VOLTAGE_2                V21
 #define vPIN_CURRENT_USAGE_2          V22
@@ -86,7 +85,6 @@ How often you would like to call function? Enter time in milliseconds
 #define vPIN_ACTIVE_ENERGY_2          V24
 #define vPIN_FREQUENCY_2              V25
 #define vPIN_POWER_FACTOR_2           V26
-#define vPIN_OVER_POWER_ALARM_2       V27
 
 #define vPIN_VOLTAGE_3                V31
 #define vPIN_CURRENT_USAGE_3          V32
@@ -94,7 +92,6 @@ How often you would like to call function? Enter time in milliseconds
 #define vPIN_ACTIVE_ENERGY_3          V34
 #define vPIN_FREQUENCY_3              V35
 #define vPIN_POWER_FACTOR_3           V36
-#define vPIN_OVER_POWER_ALARM_3       V37
 
 #define vPIN_SUM_VOLTAGE              V41
 #define vPIN_SUM_CURRENT_USAGE        V42
@@ -103,8 +100,6 @@ How often you would like to call function? Enter time in milliseconds
 #define vPIN_SUM_FREQUENCY            V45
 #define vPIN_SUM_POWER_FACTOR         V46
 
-/***************************************************
-          Server Settings
- **************************************************/
 
-#define OTA_HOSTNAME "3 Phase Failure Automation"            // OTA name
+
+ 

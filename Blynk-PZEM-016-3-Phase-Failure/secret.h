@@ -25,4 +25,4 @@
 
 #define PORT 8080
 
-#define FIRMWARE_URL "http://example.com/Blynk-PZEM-004T-Phase-Failure-Automation.ino.nodemcu.bin"        // Enter the firmware URL location. Only http Protocol is supported. https not supported. Used for FOTA
+#define FIRMWARE_URL "http://example.com/Blynk-PZEM-016-3-Phase-Failure.ino.nodemcu.bin"        // Enter the firmware URL location. Only http Protocol is supported. https not supported. Used for FOTA
