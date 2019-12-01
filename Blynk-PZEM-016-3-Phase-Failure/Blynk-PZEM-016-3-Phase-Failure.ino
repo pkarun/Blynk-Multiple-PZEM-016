@@ -30,7 +30,6 @@
  *  
  */
  
-
 //#define BLYNK_PRINT Serial           // Uncomment for debugging 
 //#define BLYNK_DEBUG                  // Optional, this enables more detailed prints
 
@@ -126,8 +125,8 @@ void postTransmission()
 
 void setup() {
 
-  pinMode(MAX485_RE_NEG, OUTPUT);
-  pinMode(MAX485_DE, OUTPUT);
+  pinMode(MAX485_RE_NEG,  OUTPUT);
+  pinMode(MAX485_DE,      OUTPUT);
   
   // Init in receive mode
   digitalWrite(MAX485_RE_NEG, 0);
@@ -183,11 +182,15 @@ void setup() {
 
    //resetEnergy(0x01);
  
-#if defined(USE_LOCAL_SERVER) 
-  Blynk.begin(AUTH, WIFI_SSID, WIFI_PASS, SERVER, PORT);
+#if defined(USE_LOCAL_SERVER)
+  WiFi.begin(WIFI_SSID, WIFI_PASS);         // Non-blocking if no WiFi available
+  Blynk.config(AUTH, SERVER, PORT);
+  Blynk.connect();
 #else
-  Blynk.begin(AUTH, WIFI_SSID, WIFI_PASS);
-#endif
+  WiFi.begin(WIFI_SSID, WIFI_PASS);         // Non-blocking if no WiFi available
+  Blynk.config(AUTH);
+  Blynk.connect();
+#endif   
 
   /*********************************************************************************************\
       RELAY code
@@ -285,8 +288,7 @@ void pzemdevice1()                                                            //
     Serial.println("====================================================");
     swith_off();                                                                  // Calling swith_off() to turn off relays
     delay(6000);                                                                  // Delay is required or else blynk keeps disconnecting
-  }
-  
+  }  
 }
 
 void pzemdevice2()                                                                // Function to get PZEM device 2 data
@@ -650,8 +652,7 @@ void loop()
   if (Blynk.connected()) {                                                    // If connected run as normal
     Blynk.run();
   } 
-  else 
-  if (ReCnctFlag == 0) {                                                      // If NOT connected and not already trying to reconnect, set timer to try to reconnect in 30 seconds
+  else if (ReCnctFlag == 0) {                                                      // If NOT connected and not already trying to reconnect, set timer to try to reconnect in 30 seconds
       blynkConnectionStatusForNotification = false;
       ReCnctFlag = 1;                                                         // Set reconnection Flag
       Serial.println("Starting reconnection timer in 30 seconds...");
